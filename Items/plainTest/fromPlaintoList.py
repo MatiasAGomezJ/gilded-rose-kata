@@ -43,9 +43,15 @@ def writeOnFile(filePath, tests):
         pass
     else:
         for j in range(len(tests[0])):
+            file.write("String[][] " + str(tests[0][j][0]).replace(" ","") + " = { \n")
             for i in range(len(tests)):
-                file.write(str(tests[i][j]))
+                file.write("\t")
+                file.write('{"' + str(tests[i][j][0]) + '", ')
+                file.write('"' + str(tests[i][j][1]) + '", ')
+                file.write('"' + str(tests[i][j][2]) + '"},')
                 file.write('\n')
+            file.write("};")
+            file.write('\n')
             file.write('\n')
     file.close()
 

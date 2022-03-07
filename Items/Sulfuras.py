@@ -19,7 +19,7 @@ if __name__ == '__main__':
     item = Sulfuras(name, sellIn, quality)
 
     for day in sulfuras1:
-        assert day == [item.name, item. sell_in, item.quality]
+        assert day == [item.name, item.sell_in, item.quality]
         print(str(day) + " == " + str([item.name, item. sell_in, item.quality]))
         item.updateQuality()
 
